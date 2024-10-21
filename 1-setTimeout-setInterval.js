@@ -4,7 +4,9 @@ const sayHi = () => {
 
 // we provide our function to setTimeout
 // setTimeout will invoke this function after 2000ms (2 seconds)
-// setTimeout(sayHi, 2000);
+// setTimeout(sayHi, 1000);
+
+
 
 
 const chars = ["\\", "|", "/", "-"];
@@ -13,12 +15,16 @@ const loopThroughChars = () => {
   console.clear()
   console.log(chars[x]);
   x++;
-  x = x % chars.length;
+  // x = x % chars.length;
   if (x >= 4) x = 0
 };
 
 // setInterval will invoke this function EVERY 200ms (5x / second)
 // setInterval(loopThroughChars, 200);
+
+// Why doesn't this work?
+// setInterval(loopThroughChars(), 200);
+
 
 
 
@@ -44,4 +50,4 @@ const animateAlien = () => {
 };
 
 // setInterval will invoke this function EVERY 200ms (5x / second)
-setInterval(animateAlien, 20);
+// setInterval(animateAlien, 20);
