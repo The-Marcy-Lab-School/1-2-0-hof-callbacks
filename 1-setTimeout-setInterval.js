@@ -26,6 +26,7 @@ let str = '👾';
 let forward = true;
 
 const animateAlien = () => {
+  // console.clear();   // uncomment this for a single-row experience
   console.log(str);
 
   if (forward) {
@@ -36,11 +37,11 @@ const animateAlien = () => {
     str = str.slice(1);
   }
 
-  // at 50 or 1, turn around
-  if (str.length === 10 || str.length === 2) {
+  // Turn around when reaching either side of the terminal
+  if (str.length === process.stdout.columns || str.length === 2) {
     forward = !forward;
   }
 };
 
 // setInterval will invoke this function EVERY 200ms (5x / second)
-// setInterval(animateAlien, 200);
+setInterval(animateAlien, 20);
