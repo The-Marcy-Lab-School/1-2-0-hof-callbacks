@@ -1,54 +1,13 @@
-/*
-Takes a function (it can't have any parameters)
-Prints the function as a string
-Invokes the function and prints the return value
-*/
-const logAndRun = (func) => {
-  const funcStr = func.toString();
-  console.log("Executing func: ", funcStr);
-
-  const returned = func();
-  console.log("Returned func value: ", returned);
-};
-
-// callbacks
-const myName = 'ben';
-const rollDie = () => {
-  return Math.ceil(Math.random() * 6);
+// This higher-order function takes in callback and executes it.
+const executeCallback = (callback) => {
+  callback();
 }
-const sayHi = () => {
-  console.log('hi')
-};
 
+// Any simple function can be a callback.
+const sayHello = () => console.log("hello world");
 
-/*
-When providing a "callback" function as an argument,
-remember to omit the (), just provide the function
-itself, because the logAndRun function will invoke it.
-*/
-debugger;
-logAndRun(rollDie);
-logAndRun(sayHi);
+// We pass in the callback to the higher-order function
+executeCallback(sayHello);
+// hello world
 
-
-
-
-/* Here is what the HOF is doing
-
-// turn rollDie into a string
-const funcStr = rollDie.toString();
-console.log("Executing func: ", funcStr);
-
-// invoke it
-const returned = rollDie();
-console.log("Returned func value: ", returned);
-
-// turn sayHi into a string
-const funcStr2 = sayHi.toString();
-console.log("Executing func: ", funcStr2);
-
-// invoke it
-const returned2 = sayHi();
-console.log("Returned func value: ", returned2);
-
-*/
+// TODO: Create your own callback and pass it to executeCallback
