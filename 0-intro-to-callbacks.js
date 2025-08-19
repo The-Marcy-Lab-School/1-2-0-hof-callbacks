@@ -8,6 +8,6 @@ const sayHello = () => console.log("hello world");
 
 // We pass in the callback to the higher-order function
 executeCallback(sayHello);
-// hello world
 
-// TODO: Create your own callback and pass it to executeCallback
+// Challenge: Create your own callback and pass it to executeCallback
+

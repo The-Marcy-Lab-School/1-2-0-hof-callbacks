@@ -4,7 +4,7 @@ const sayHi = () => {
 
 // we provide our function to setTimeout
 // setTimeout will invoke this function after 2000ms (2 seconds)
-// setTimeout(sayHi, 1000);
+setTimeout(sayHi, 1000);
 
 
 
@@ -23,10 +23,7 @@ const loopThroughChars = () => {
 // setInterval will invoke this function EVERY 200ms (5x / second)
 // setInterval(loopThroughChars, 200);
 
-// Why doesn't this work?
-// setInterval(loopThroughChars(), 200);
-
-
+// Press Ctrl+C to cancel the program
 
 
 let str = '👾';
@@ -52,3 +49,4 @@ const animateAlien = () => {
 
 // setInterval will invoke this function EVERY 200ms (5x / second)
 // setInterval(animateAlien, 20);
+
