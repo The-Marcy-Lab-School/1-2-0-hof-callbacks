@@ -10,13 +10,14 @@ const sayHi = () => {
 
 
 const chars = ["\\", "|", "/", "-"];
-let x = 0;
+let i = 0;
+
+// empty the console each time and print the next character in the sequence
 const loopThroughChars = () => {
   console.clear()
-  console.log(chars[x]);
-  x++;
-  // x = x % chars.length;
-  if (x >= 4) x = 0
+  console.log(chars[i]);
+  i++;
+  if (i >= 4) i = 0;
 };
 
 // setInterval will invoke this function EVERY 200ms (5x / second)
