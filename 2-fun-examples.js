@@ -1,13 +1,6 @@
-const sayHi = () => {
-  console.log('hi');
-};
-
-// we provide our function to setTimeout
-// setTimeout will invoke this function after 2000ms (2 seconds)
-setTimeout(sayHi, 1000);
-
-
-
+// --------------------------
+// Example 1: Create a "loading wheel" animation
+// --------------------------
 
 const chars = ["\\", "|", "/", "-"];
 let i = 0;
@@ -20,11 +13,11 @@ const loopThroughChars = () => {
   if (i >= 4) i = 0;
 };
 
-// setInterval will invoke this function EVERY 200ms (5x / second)
-// setInterval(loopThroughChars, 200);
+// Try invoking this function with setInterval every 250ms (4x / second)
 
-// Press Ctrl+C to cancel the program
-
+// --------------------------
+// Example 2: Animate an alien that bounces across the screen
+// --------------------------
 
 let str = '👾';
 let forward = true;
@@ -42,11 +35,10 @@ const animateAlien = () => {
   }
 
   // Turn around when reaching either side of the terminal
-  if (str.length === process.stdout.columns || str.length === 2) {
+  const terminalWidth = process.stdout.columns;
+  if (str.length === terminalWidth || str.length === 2) {
     forward = !forward;
   }
 };
 
-// setInterval will invoke this function EVERY 200ms (5x / second)
-// setInterval(animateAlien, 20);
-
+// Try invoking this function with setInterval every 20ms (50x / second)
